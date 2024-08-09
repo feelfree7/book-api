@@ -1,0 +1,118 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e9ecef; 
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff; 
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+header {
+  background-color: #343a40; 
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  margin: 10px 0;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ced4da; 
+}
+
+input:focus, select:focus {
+  border-color: #007bff; 
+  outline: none;
+}
+
+button {
+  background-color: #28a745; 
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: #218838; 
+}
+
+.category-filter {
+  margin-bottom: 20px;
+}
+
+.category-filter label {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.category-filter select {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  background-color: #f8f9fa; 
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #ffffff; 
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #dee2e6; 
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+li div {
+  display: flex;
+}
+
+li button {
+  margin-left: 5px;
+  background-color: #dc3545; 
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+li button:hover {
+  background-color: #c82333; 
+}
+
+button.edit {
+  background-color: #007bff; 
+}
+
+button.edit:hover {
+  background-color: #0056b3; 
+}
