@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const cors = require("cors");
 
 
 dotenv.config();
@@ -9,6 +10,7 @@ const app = express();
 const port = process.env.PORT || 3001; 
 
 // Middleware skirtas JSON duomenų parsiruošimui
+app.use(cors());
 app.use(express.json());
 
 // Prisijungimas prie MongoDB naudojant aplinkos kintamąjį arba nurodytą URL
@@ -122,11 +124,8 @@ app.put('/books/:id', async (req, res) => {
 // DELETE knygos ištrynimas pagal ID
 app.delete('/books/:id', async (req, res) => {
     try {
-        const book = await Book.findById(req.params.id);
-        if (book) {
-            await book.remove();
-            res.json({ message: 'Knyga ištrinta' });
-        } else {
+        const book = await Book.findByIdAndDelete(req.params.id);
+        if (!book) {
             res.status(404).json({ message: 'Knyga nerasta' });
         }
     } catch (err) {
